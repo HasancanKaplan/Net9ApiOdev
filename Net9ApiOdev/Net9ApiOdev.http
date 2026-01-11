@@ -1,0 +1,34 @@
+### Yeni Kullanýcý Ekle (POST)
+POST https://localhost:7012/api/users
+Content-Type: application/json
+
+{
+  "name": "Hasancan Kaplan",
+  "email": "hasancan@test.com",
+  "password": "123"
+}
+
+###
+### Kategori Ekle
+POST https://localhost:7012/api/categories
+Content-Type: application/json
+
+{
+  "name": "Elektronik"
+}
+
+### Tüm Kategorileri Getir
+GET https://localhost:7012/api/categories
+### Ürün Ekle (Kategori ID 1 Olarak)
+POST https://localhost:7012/api/products
+Content-Type: application/json
+
+{
+  "name": "Laptop",
+  "price": 25000,
+  "stock": 10,
+  "categoryId": 1
+}
+
+### Tüm Ürünleri Getir (Kategori Ýsmiyle Birlikte Gelmeli)
+GET https://localhost:7012/api/products
